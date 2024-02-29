@@ -5,3 +5,182 @@
 input {
   @apply w-[400px] border border-gray-200 py-2 px-6 bg-zinc-100/40;
 }
+
+
+.main_nav ul{
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px;
+}
+
+.main_nav ul li{
+  text-decoration: none;
+  padding: 20px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.nav_link{
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.link{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover{
+  color: blue;
+}
+
+.main_nav {
+  align-items: center; /* Vertically align links within the nav bar */
+  list-style: none; /* Remove default bullet points from the list */
+  margin: 0; /* Remove default margin for better control */
+  padding: 0; /* Remove default padding for better control */
+  background-color: #f8f8f8; /* Subtle gray background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+  border-radius: 5px; /* Rounded corners for a polished look */
+  font-family: "Shadows Into Light", cursive; /* Decorative font */
+  font-size: 16px; /* Base font size for links */
+}
+
+.nav_link {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Darker text color for better contrast */
+  padding: 10px 20px; /* Add spacing around link text */
+  transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+.nav_link:hover {
+  color: #000; /* Change link color on hover for interactivity */
+  background-color: #e8e8e8; /* Subtle background change on hover */
+}
+
+
+
+.home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.lazy_coder{
+  font-family: "Shadows Into Light", cursive; /* Decorative font */
+  font-size: 2em; /* Increase font size */
+  margin: 0; /* Remove default margin */
+  text-shadow: 2px 2px 5px #000000; 
+
+}
+.title_container{
+  /* margin: 20px 20px;
+  display: flex;
+  justify-content: center;
+ gap: 100px; */
+
+ /* background: linear-gradient(to right, #1E1E1E, #000000);  */
+ background: #152621;
+ color: #fff; /* White text color */
+ padding: 0px 20px 0px 20px; /* Adding some padding */
+ display: flex; /* Enable flexbox layout */
+ justify-content: space-between; /* Align elements horizontally */
+ align-items: center; /* Align elements vertically */
+ text-align: center; /* Center text within the container */
+}
+
+.image-slider {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to next line if needed */
+  justify-content: space-between; /* Distribute space evenly between images */
+}
+ .coderImage {
+  margin: 5px; /* Add spacing between images */
+  transition: transform 0.5s ease; /* Smooth transition for resizing */
+}
+
+@media screen and (min-width: 768px) {
+  .coderImage:nth-child(odd) {
+    flex: 2; /* Make odd images twice as wide */
+  }
+  .coderImage:nth-child(even) {
+    flex: 1; /* Make even images half as wide */
+  }
+}
+
+/* Optional: Add hover styles for interactivity */
+.coderImage:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
+.coderImage{
+  /* border-radius: 10px; */
+  /* box-shadow:  5px 5px 10px rgb(0, 0, 0); */
+}
+
+
+
+
+.blogs.home_container {
+  background: #f8fafc; /* Light gray background */
+  padding: 20px; /* Adding padding */
+  display: flex; /* Enable flexbox layout for responsive columns */
+  flex-wrap: wrap; /* Allow items to wrap to next line if full */
+  justify-content: space-between; /* Distribute space evenly */
+  max-width: 1000px; /* Limit container width for medium screens and up */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.popular_blog {
+  font-family: "Lato", sans-serif; /* Modern-looking font */
+  font-size: 2em; /* Increased heading size */
+  margin: 0 0 20px; /* Add space below the heading */
+  text-align: center; /* Center the title */
+}
+
+.blogItem {
+  background-color: #fff; /* White background for each item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Add padding inside each item */
+  margin-bottom: 20px; /* Add spacing between items */
+  width: calc(70% - 20px); /* Calculate width based on 3 columns */
+  flex: 0 0 calc(33% - 20px); /* Responsive column sizing */
+}
+
+.blog_title {
+  font-family: "Raleway", sans-serif; /* Another modern font */
+  font-size: 1.5em; /* Smaller heading size for clarity */
+  margin-bottom: 10px; /* Add space below title */
+}
+
+.blog_para {
+  line-height: 1.5; /* Adjust line spacing for better readability */
+  color: #333; /* Darker text color for contrast */
+}
+
+/* Optional: Hover effect for blog items */
+
+.blogItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.02); /* Slight scale animation on hover */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens (e.g., mobile) */
+  .blogs.home_container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items vertically */
+  }
+
+  .blogItem {
+    width: 100%; /* Use full width on mobile */
+  }
+}
