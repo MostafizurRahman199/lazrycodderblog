@@ -1,0 +1,72 @@
+/* contact.module.css */
+
+.formStyles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%; /* Ensure form adapts to different container sizes */
+    max-width: 600px; /* Optional: Set a maximum width for responsiveness */
+    margin: 0 auto; /* Center the form within its container */
+    margin-top: 30px;
+   
+    border-radius: 20px;
+    margin-bottom: 23px;
+  }
+  
+  .formStyles label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    border-radius: 20px;
+  }
+  
+  .formStyles input[type="text"],
+  .formStyles input[type="email"],
+  .formStyles textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none; /* Prevent textarea resizing */
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .formStyles textarea {
+    height: 10rem;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .formStyles button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+  
+  .formStyles button:hover {
+    background-color: #0062cc;
+  }
+  
+  .formStyles .errors {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Optional: Add a subtle border to the form for better contrast */
+  .formStyles {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  

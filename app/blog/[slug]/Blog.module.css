@@ -1,26 +1,72 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  /* Display properties for responsiveness */
+  display: flex;
+  flex-direction: column;
+  /* Adjust width as needed */
+  max-width: 800px;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem;
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 5px; /* Optional rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+.title {
+  font-size: 2.5rem; /* Adjust font size for H1 */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333; /* Adjust color as needed */
+}
+
+.author_title {
+  font-size: 1.2rem; /* Adjust font size for H3 */
+  margin-bottom: 1rem;
+  color: #666; /* Adjust color as needed */
+}
+
+.content {
+  font-family: "Open Sans", sans-serif; /* Specify a modern font */
+  font-size: 1rem; /* Adjust font size for body text */
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin-bottom: 1rem;
+  color: #333; /* Adjust color as needed */
+}
+
+.hr {
+  border: none; /* Remove horizontal line border */
+  height: 1px; /* Set height for a thin line */
+  background-color: #ddd; /* Color for the line */
+  margin: 1rem 0; /* Add space above and below the line */
+}
+.name_image {
+  display: flex; /* Make the elements display horizontally */
+  align-items: center; /* Align content vertically in the middle */
+  margin-bottom: 10px;
+}
+
+.name_image .author_image {
+  margin-right: 1rem; /* Add some space between image and text */
+}
+/* Optional styling for the Image element */
+.author_image {
+  /* width: 100px; 
+  height: 100px;  */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure image fills the container while maintaining aspect ratio */
+}
+
+/* Add media queries for responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Adjust max-width for smaller screens */
   }
-  
   .title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
   }
   .author_title {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
-  
   .content {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
-  
-  .hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
+}

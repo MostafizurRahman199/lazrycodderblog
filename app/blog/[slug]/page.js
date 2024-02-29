@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./Blog.module.css"; // Import CSS module
 import { connectMongoDB } from '../../../lib/db';
 import Blog from '../../../models/blog'
+import Image from "next/image";
 
 const fetchBlogById = async (id) => {
   try {
@@ -12,7 +13,7 @@ const fetchBlogById = async (id) => {
     console.log("Id new ", id);
     const objectId = id; // Access the correct property
     const blog = await Blog.findById(objectId).maxTimeMS(30000);
-    console.log(blog);
+    // console.log(blog);
 
     if (!blog) {
       throw new Error("Product not found");
@@ -30,7 +31,7 @@ const fetchBlogById = async (id) => {
 
 export default async function Page({ params }) {
   const blogId = params.slug;
-  console.log(params);
+  // console.log(params);
 
   try {
     const blog = await fetchBlogById(blogId);
@@ -47,7 +48,10 @@ export default async function Page({ params }) {
     return (
       <div className={styles.container}>
         <h1 className={styles.title}>{blog.title}</h1>
-        <h3 className={styles.author_title}>Author : {blog.author}</h3>
+        <div className={styles.name_image}>
+          <Image src='/author.webp' alt="author_image" width={40} height={40} className={styles.author_image }></Image>
+          <h3 className={styles.author_title}>Author : {blog.author}</h3>
+        </div>
         <hr className="hr" />
         <div className={styles.content}>
          {blog.content}
