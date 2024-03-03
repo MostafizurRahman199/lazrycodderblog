@@ -24,6 +24,28 @@
   color: #666; /* Adjust color as needed */
 }
 
+.update_button{
+  font-size: 1rem; /* Adjust font size for H3 */
+  margin-bottom: 1rem;
+  color: black; /* Adjust color as needed */ 
+  background-color: gainsboro;
+  border: 1px solid;
+  padding: 0.4rem;
+  border-radius: 10px;
+  margin-left: 18rem;
+ 
+}
+.delete_button{
+  font-size: 1rem; /* Adjust font size for H3 */
+  margin-bottom: 1rem;
+  color: white; /* Adjust color as needed */ 
+  background-color: red;
+  padding: 0.4rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+ 
+}
+
 .content {
   font-family: "Open Sans", sans-serif; /* Specify a modern font */
   font-size: 1rem; /* Adjust font size for body text */

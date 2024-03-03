@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react'
 export default function Header() {
 
     const [move, setmove] = useState("");
-    const {data : session} = useSession();
+   const {data : session} = useSession();
   
     
 
