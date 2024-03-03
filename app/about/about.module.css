@@ -125,7 +125,7 @@
   justify-content: space-between;
   gap: 4rem;
   animation: slide 12s infinite linear; /* Animation for continuous sliding */
-  width: 500px;
+  width: 300px;
 }
 
 .reviewCard {

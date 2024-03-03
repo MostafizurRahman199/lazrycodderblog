@@ -1,10 +1,11 @@
-
+// "use client"
 import { useRouter } from "next/navigation";
-import React from "react";
+// import React, { useState } from "react";
 import styles from "./Blog.module.css"; // Import CSS module
 import { connectMongoDB } from '../../../lib/db';
 import Blog from '../../../models/blog'
 import Image from "next/image";
+import Review from '../../../components/Review'
 
 const fetchBlogById = async (id) => {
   try {
@@ -30,6 +31,9 @@ const fetchBlogById = async (id) => {
 
 
 export default async function Page({ params }) {
+
+
+
   const blogId = params.slug;
   // console.log(params);
 
@@ -55,7 +59,11 @@ export default async function Page({ params }) {
         <hr className="hr" />
         <div className={styles.content}>
          {blog.content}
+
+         <Review></Review>
         </div>
+
+     
       </div>
     );
   } catch (error) {

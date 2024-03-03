@@ -5,6 +5,7 @@ import { connectMongoDB } from '../../lib/db'
 
 
 
+
 await connectMongoDB()
 const fetchProducts = async ()=>{
     try {
@@ -32,6 +33,8 @@ export default async function blog() {
             <h1 className="blog_title">{blog.title}</h1></Link>
             {/* <h3 className="blog_title">Author : {blog.author}</h3> */}
               <p className="blog_para">{blog.content.slice(0,100)+'...'}</p>
+
+             
             </div>
           )
         })

@@ -171,6 +171,9 @@ input {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
   transform: scale(1.02); /* Slight scale animation on hover */
   transition: transform 0.2s ease-in-out; /* Smooth transition */
+  background-color: rgb(188, 206, 244);
+  
+  
 }
 /* */
 @media screen and (max-width: 768px) {
@@ -295,7 +298,7 @@ input {
 
 .input-group button {
   padding: 4px 6px;
-  background-color: #007bff;
+  background-color: #6b46c1;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -305,7 +308,7 @@ input {
 }
 
 .input-group button:hover {
-  background-color: #0056b3;
+  background-color: #553c9a;
 }
 .input-group-text{
   display: flex;

@@ -42,7 +42,7 @@ export default function Footer() {
               
               <div className="input-group-text">
               <input id="newsletter1" type="text" placeholder="Email address" />
-              <button type="button">Subscribe</button>
+              <button type="button" className={styles.btn}>Subscribe</button>
               </div>
             </div>
           </form>
@@ -52,6 +52,11 @@ export default function Footer() {
       {/* Copyright Section */}
       <div className={styles.footerBottom}>
         <p>© {new Date().getFullYear()} | Made with ❤️ by Lazy Coder</p>
+        <ul className="list-unstyled d-flex">
+      <li className="ms-3"><a className="link-body-emphasis" href="#"><BsFacebook></BsFacebook></a></li>
+      <li className="ms-3"><a className="link-body-emphasis" href="#"><BsInstagram></BsInstagram></a></li>
+      <li className="ms-3"><a className="link-body-emphasis" href="#"><BsTwitter></BsTwitter></a></li>
+    </ul>
       </div>
     </footer>
   );

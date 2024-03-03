@@ -34,10 +34,18 @@ export default function Header() {
           <Link className="nav_link"  href={'/'}><li>Home</li></Link>
           <Link className="nav_link" href={'/about'}><li>About</li></Link>
           <Link className="nav_link" href={'/blog'}><li>Blog</li></Link>
+          {
+           !session?.user?.name &&
           <Link className="nav_link" href={'/contact'}><li>Contact</li></Link>
+          }
           {
               session?.user?.name  && 
               <Link className="nav_link" href={'/addblog'}><li>Add Blog</li></Link> 
+          
+          }
+          {
+              session?.user?.name  && 
+              <Link className="nav_link" href={'/checkmessage'}><li>Message</li></Link> 
           
           }
           {

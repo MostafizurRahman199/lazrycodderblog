@@ -41,7 +41,7 @@
     margin-bottom: 20px;
   }
   .formStyles button {
-    background-color: #007bff;
+    background-color: #6b46c1;
     color: #fff;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -54,7 +54,7 @@
   }
   
   .formStyles button:hover {
-    background-color: #0062cc;
+    background-color: #553c9a;
   }
   
   .formStyles .errors {

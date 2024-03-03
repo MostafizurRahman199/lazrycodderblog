@@ -1,78 +1,66 @@
 "use client"
+// LoginForm.js
 
 import { signIn } from 'next-auth/react';
 import Link from 'next/link'
+import React, { useState } from 'react';
+import styles from './login.module.css'; // Importing CSS module
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
 
 const LoginForm = () => {
-
-  const [email,setEmail] = useState("");
-  const [password,setPassword]  = useState("");
-  const [error,setError] = useState("");
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit =async (e: { preventDefault: () => void; }) =>{
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
     try {
-      const res = await signIn('credentials',{
+      const res = await signIn('credentials', {
         email,
         password,
-        redirect:false
+        redirect: false
       });
 
-      if(res?.error){
-        setError("Invalid Credintails!");
+      if (res?.error) {
+        setError("Invalid Credentials!");
         return;
       }
-      router.replace("/");
-      
+      router.replace("/"); // Correct route definition
     } catch (error) {
       console.log(error);
-      
     }
-
-
-  }
-
+  };
 
   return (
-    <div className='grid place-items-center h-screen'>
-      <div className="shadow-lg p-5 rounded-lg border-t-4 border-violet-600">
-        <h1 className="text-xl font-bold my-4">Enter the Infromation </h1>
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>Enter the Information</h1>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="text"
             placeholder="Email"
+            className={styles.input}
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
+            className={styles.input}
           />
-          <button className="bg-violet-600 text-white font-bold cursor-pointer px-6 py-2">
-            Login
-          </button>
-          
+          <button className={styles.button}>Login</button>
           {error && (
-            <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
-              {error}
-            </div>
-            )}
-         
-
-          <Link className="text-sm mt-3 text-right" href={"/register"}>
-            Don't have an account? <span className="underline">Register</span>
+            <div className={styles.error}>{error}</div>
+          )}
+          <Link href={"/register"} className={styles.link}>
+           Don't have an account <span className={styles.underline}>Register</span>
           </Link>
         </form>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginForm
+export default LoginForm;
