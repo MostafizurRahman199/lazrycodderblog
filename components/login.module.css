@@ -70,5 +70,11 @@
     border: 1px solid;
     padding: 0.4rem;
     border-radius: 10px;
+    border: none;
     margin-left: 18rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(87, 10, 159, 0.32) 0px 2px 16px 0px;
+  }
+
+  .have_design:hover{
+    box-shadow: rgba(44, 4, 94, 0.378) 0px 0px 0px 3px;
   }

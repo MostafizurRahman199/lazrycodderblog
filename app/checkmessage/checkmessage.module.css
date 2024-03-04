@@ -27,6 +27,7 @@
   }
   
   .message_item {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border: 1px solid #ddd; /* Use solid border for clarity */
     border-radius: 0.5rem; /* Rounded corners for visual appeal */
     padding: 1rem;
@@ -71,6 +72,7 @@
     margin-right: 1rem; /* Maintain spacing */
     grid-row: 1 / span 2; /* Span two rows for vertical centering */
     align-self: center; /* Align vertically within message area */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   
   .message_details {

@@ -75,6 +75,7 @@
   height: 100px;  */
   border-radius: 50%; /* Make the image circular */
   object-fit: cover; /* Ensure image fills the container while maintaining aspect ratio */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 /* Add media queries for responsive adjustments */
