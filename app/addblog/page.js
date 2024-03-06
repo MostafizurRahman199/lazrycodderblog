@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './addblog.module.css';
 
 export default function AddBlog() {
@@ -38,7 +38,7 @@ export default function AddBlog() {
  setAuthor("");
  setContent("");
  
-      // alert("Message sent");
+      alert("Message sent");
     } catch (error) {
       console.log("Error : ", error);
     }
