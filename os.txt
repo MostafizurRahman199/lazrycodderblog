@@ -1,0 +1,39 @@
+         +-------------------+
+         |      Process A     | (Running at t=0)
+         +-------------------+
+                  |
+                  v
+           +---------+---------+
+           |         |         |
+      (t=1)   NMI      IRQ      | (t=3) - C is ignored due to NMI handling B
+           |         |         |
+           +---------+---------+
+                  |
+                  v
+           +---------+---------+
+           |         |         |
+      (t=5)   NMI      IRQ      | (t=9) - E waits due to NMI handling D
+           |         |         |
+           +---------+---------+
+                  |
+                  v
+           +---------+
+           |  Handle B | (t=1 to t=7) - Interrupt handling for B (2 seconds)
+           +---------+
+                  |
+                  v (Resume A execution)
+           +---------+
+           |  Handle D | (t=5 to t=7) - Interrupt handling for D (interrupted by B) (2 seconds)
+           +---------+
+                  |
+                  v
+           +---------+---------+
+           |         |         |
+           |   A     |   E      | (t=7) - Both processes waiting for completion of handling
+           |         |         |
+           +---------+---------+
+                  |
+                  v
+           +---------+
+           | Process A | (t=7 to t=10) - Resume and finish execution (3 seconds)
+           +---------+

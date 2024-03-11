@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import  {connectMongoDB} from '../../../lib/db'
 import contactModel from '../../../models/contact'
+
+
 export const POST = async (req) => {
     try {
       // Ensure database connection within the handler

@@ -1,18 +1,14 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import styles from './addblog.module.css';
+"use client";
+import React, { useEffect, useState } from "react";
+import styles from "./addblog.module.css";
 
 export default function AddBlog() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
 
-
   const handleSubmit = async () => {
-
-      
     try {
-    
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
@@ -34,41 +30,40 @@ export default function AddBlog() {
         requestOptions
       );
 
- setTitle("");
- setAuthor("");
- setContent("");
- 
+      setTitle("");
+      setAuthor("");
+      setContent("");
+
       alert("Message sent");
     } catch (error) {
       console.log("Error : ", error);
     }
   };
 
-
   return (
-    <form className={styles.container} onSubmit={()=>handleSubmit()}>
+    <form className={styles.container} onSubmit={() => handleSubmit()}>
       <h1 className={styles.title}>Write your blog</h1>
-      <input 
-        className={styles.inputField} 
-        placeholder='Title' 
-        value={title} 
-        onChange={(e) => setTitle(e.target.value)} 
+      <input
+        className={styles.inputField}
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
-      <input 
-        className={styles.inputField} 
-        placeholder='Author name' 
-        value={author} 
-        onChange={(e) => setAuthor(e.target.value)} 
+      <input
+        className={styles.inputField}
+        placeholder="Author name"
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
       />
-      <textarea 
-        className={styles.textareaField} 
-        placeholder='Content' 
-        value={content} 
-        onChange={(e) => setContent(e.target.value)} 
+      <textarea
+        className={styles.textareaField}
+        placeholder="Content"
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
       />
-      <button className={styles.submitButton} type='submit' >Submit</button>
- 
+      <button className={styles.submitButton} type="submit">
+        Submit
+      </button>
     </form>
   );
 }
-
